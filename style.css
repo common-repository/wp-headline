@@ -1,0 +1,53 @@
+ul.contentlist {
+	list-style-type:none !important;
+	background-color: #009999;
+	border: 1px #000000 solid;
+	float:right;
+	margin:2px !important;
+	padding:5px !important;
+}
+
+ul.contentlist li {
+	list-style-type:none !important;
+	margin: 2px;
+}
+
+.contentlistlevel1 {
+	counter-increment:countercontentlistlevel1;
+	counter-reset: countercontentlistlevel2 countercontentlistlevel3 countercontentlistlevel4 countercontentlistlevel5;
+}
+.contentlistlevel1 a:before {
+	content: counter(countercontentlistlevel1) " ";
+}
+
+.contentlistlevel2 {
+	counter-increment:countercontentlistlevel2;
+	counter-reset: countercontentlistlevel3 countercontentlistlevel4 countercontentlistlevel5;
+}
+.contentlistlevel2 a:before {
+	content: counter(countercontentlistlevel1) "." counter(countercontentlistlevel2) " ";
+}
+
+.contentlistlevel3 {
+	counter-increment:countercontentlistlevel3;
+	counter-reset: countercontentlistlevel4 countercontentlistlevel5;
+}
+.contentlistlevel3 a:before {
+	content: counter(countercontentlistlevel1) "." counter(countercontentlistlevel2) "." counter(countercontentlistlevel3) " ";
+}
+
+.contentlistlevel4 {
+	counter-increment:countercontentlistlevel4;
+	counter-reset: countercontentlistlevel5;
+}
+.contentlistlevel4 a:before {
+	content: counter(countercontentlistlevel1) "." counter(countercontentlistlevel2) "." counter(countercontentlistlevel3) "." counter(countercontentlistlevel4) " ";
+}
+
+.contentlistlevel5 {
+	counter-increment:countercontentlistlevel5;
+}
+.contentlistlevel5:before {
+	content: counter(countercontentlistlevel1) "." counter(countercontentlistlevel2) "." counter(countercontentlistlevel3) "." counter(countercontentlistlevel4) "." counter(countercontentlistlevel5) " ";
+}
+
